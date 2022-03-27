@@ -1,7 +1,8 @@
-# Vue 3 + Vite
+# Vitest
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+There is a bug where updating the `vite.config.js` will cause the test watcher to reload and then fail the tests.
 
-## Recommended IDE Setup
+To reproduce:
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+1. run `yarn test`
+2. hit `ctrl + s` inside the `vite.config.js`. No need to change anything.
